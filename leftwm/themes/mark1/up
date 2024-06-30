@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+
+export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+
+ln -s "$SCRIPTPATH"/down /tmp/leftwm-theme-down
+
+# up theme
+leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
+
+feh --bg-fill ./walpapers/walpaper1.jpg
+eww open window_bar

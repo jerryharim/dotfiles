@@ -1,0 +1,121 @@
+# ~~~~~~~~~~~~~~~~~~~~~
+# LF Configuration file
+# By JerryHarim (https://github.com/jerryharim)
+# ~~~~~~~~~~~~~~~~~~~~~
+
+# Window
+# ----------
+set nodrawbox
+set nopreview
+set ratios 1
+set sortby ctime 
+set reverse!
+
+
+cmd mkdir ${{
+  printf "Directory name : "
+  read dirname
+  mkdir $dirname
+}}
+
+cmd mkfile ${{
+  printf "File name to create : "
+  read filename
+  touch $filename
+}}
+
+# open a file with a program in /usr/bin
+cmd open_with ${{
+  oldPath=$(pwd)
+  cd /usr/bin
+  openwith=$(echo /usr/bin/$(fzf))
+  cd $oldPath
+  $openwith "$f"
+}}
+
+cmd move_to_music ${{
+  mv "$f" ~/music
+}}
+
+cmd move_to_program ${{
+  mv "$f" ~/program
+}}
+
+cmd terminal ${{
+  $TERM
+}}
+
+cmd edit_config_file ${{
+  configPath="$HOME/.config"
+  cd $configPath 
+  configFile=$(echo $configPath/$(fzf))
+  if [ -f $configFile ]; then
+    $EDITOR $configFile
+  fi
+}}
+
+cmd organize_by_type ${{	
+	mkdir -p video docs pics compressed zik programs
+
+	mv *mp4 video
+	mv *pdf *xlsx *docx docs
+	mv *jpg *png pics 
+	mv *zip *tar *gz *xz compressed
+	mv *mp3 zik 
+	mv *apk programs 
+}}
+
+cmd extract ${{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+
+# TMSU : tag and search files
+
+cmd tag_file ${{
+  	printf "Tags : "
+  	read tags
+	tmsu tag "$f" $tags
+}}
+
+
+
+# Mapping
+# ----------
+
+# reset some map
+
+map e
+
+# utilities
+
+map Md mkdir
+map Mf mkfile
+map ow open_with 
+map ec edit_config_file
+map D delete
+
+# move file
+map tm move_to_music
+map tp move_to_program
+
+# tag
+map at tag_file 
+
+
+# mouvement
+map gd cd ~/downloads
+map gm cd /run/media/jok3r
+map gcj cd ~/work/pro/code
+map gcp cd ~/work/perso/code
+map gwp cd ~/work/perso/code/web/jerryharim.work
+
+
