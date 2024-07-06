@@ -32,12 +32,21 @@ super + shift + s
     kitty -e alsamixer
 
 
+# Data consumption
 super + F10
     kitty -e watch -n 2 vnstat -d 1 
+
+
+# --------
+# APPS
+# --------
 
 # Browser
 super + b ; {b,f}
     {brave,firefox}
 
+# Obsidian
+super + alt + o
+   obsidian
 
 

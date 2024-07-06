@@ -168,7 +168,7 @@ for_window [class=".*"] border pixel 0
 for_window [class="[.]*"] floating enable 
 for_window [class="eww"] floating disable 
 
-assign [class="qutebrowser"] 3
+assign [class="obsidian"] 2
 assign [class="Brave"] 3
 assign [class="Gimp"] 8
 
