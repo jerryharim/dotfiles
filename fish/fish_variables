@@ -267,7 +267,7 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/edith/\x2elocal/bin\x1e/home/edith/\x2ecargo/bin/\x1e/usr/lib/jvm/default/bin\x1e/home/edith/\x2elocal/kitty\x2eapp/bin\x1e/home/edith/\x2esymfony/bin/\x1e/home/edith/\x2eyarn/bin\x1e/home/edith/\x2econfig/yarn/global\x1e/home/edith/program/graalvm\x2dce\x2djava11\x2d21\x2e2\x2e0\x1e/home/edith/doom\x2demacs/bin\x1e/home/edith/\x2eemacs\x2ed/bin\x1e/usr/local/bin\x1e/snap/bin\x1e/snap\x1e/home/edith/go/bin
+SETUVAR --export fish_user_paths:/home/edith/\x2elocal/bin\x1e/usr/bin/flutter/bin\x1e/home/edith/\x2ecargo/bin/\x1e/usr/lib/jvm/default/bin\x1e/home/edith/\x2elocal/kitty\x2eapp/bin\x1e/home/edith/\x2esymfony/bin/\x1e/home/edith/\x2eyarn/bin\x1e/home/edith/\x2econfig/yarn/global\x1e/home/edith/program/graalvm\x2dce\x2djava11\x2d21\x2e2\x2e0\x1e/home/edith/doom\x2demacs/bin\x1e/home/edith/\x2eemacs\x2ed/bin\x1e/usr/local/bin\x1e/snap/bin\x1e/snap\x1e/home/edith/go/bin\x1e/tmp/fzf/bin
 SETUVAR tide_aws_bg_color:normal
 SETUVAR tide_aws_color:FF9900
 SETUVAR tide_aws_icon:\uf270

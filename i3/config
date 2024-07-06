@@ -170,9 +170,6 @@ bindsym $mod+Shift+s exec --no-startup-id $terminal -e alsamixer
 # Network statistics with vnstat
 bindsym $mod+F10 exec st -e watch -n 2 vnstat -d 1 
 
-# Nmtui
-bindsym $mod+c exec st -e nmtui
-
 # explorer
 bindsym $mod+Shift+n exec thunar
 bindsym $mod+n exec $terminal -e lf
