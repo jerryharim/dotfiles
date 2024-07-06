@@ -1,0 +1,52 @@
+# terminal
+super + Return
+    kitty
+
+# Brightness
+super + XF86MonBrightnessDown 
+    brillo -q -U 10
+super + XF86MonBrightnessUp
+    brillo -q -A 10
+
+
+# Power control
+super + shift + Escape 
+    loginctl poweroff
+super + shift + F1
+    loginctl reboot
+
+
+# Keyboard layout
+super + i
+    setxkbmap fr
+super + u
+    setxkbmap us
+
+
+# App launcher
+super + d 
+    rofi -show drun
+
+# Audio
+super + shift + s
+    kitty -e alsamixer
+
+
+# Data consumption
+super + F10
+    kitty -e watch -n 2 vnstat -d 1 
+
+
+# --------
+# APPS
+# --------
+
+# Browser
+super + b ; {b,f}
+    {brave,firefox}
+
+# Obsidian
+super + alt + o
+   obsidian
+
+

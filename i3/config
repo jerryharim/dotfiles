@@ -132,70 +132,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-# ========================
-# Utilities Bidings 
-# ========================
-
-# Terminal
-bindsym $mod+Return exec $terminal
-bindsym $mod+Shift+Return exec st 
-
-# Toggle touchpad : custom script
-bindsym XF86TouchpadToggle exec toggle-touchpad  
-
-# brightness
-bindsym XF86MonBrightnessDown exec brillo -q -U 10
-bindsym XF86MonBrightnessUp exec brillo -q -A 10
-
 # Kill focused window
 bindsym $mod+Shift+q kill
-
-# Alimentation
-bindsym $mod+Shift+Escape exec --no-startup-id loginctl poweroff
-bindsym $mod+Shift+F1 exec --no-startup-id loginctl reboot
-
-# switch keyboard
-bindsym $mod+i exec setxkbmap fr
-bindsym $mod+u exec setxkbmap us
-
-# Menu
-bindsym $mod+d exec rofi -show drun
-
-# Lock screen
-bindsym $mod+Escape exec i3lock-fancy 
-
-# Setting audio 
-bindsym $mod+Shift+s exec --no-startup-id $terminal -e alsamixer
-
-# Network statistics with vnstat
-bindsym $mod+F10 exec st -e watch -n 2 vnstat -d 1 
-
-# explorer
-bindsym $mod+Shift+n exec thunar
-bindsym $mod+n exec $terminal -e lf
-bindsym $mod+Shift+F12 exec st -e mpv --no-video --shuffle $focus_music 
-
-# process
-bindsym $mod+t exec st -e top 
-
-
-# ========================
-# App Bidings 
-# ========================
-
-# Emoji
-# bindsym $mod+Shift+e exec ibus emoji
-bindsym $mod+Shift+e exec rofi -modi emoji -show emoji
-
-# code
-bindsym $mod+F8 exec st -e nvim
-
-# documents viewer
-bindsym $mod+b exec evince 
-
-# Obsidian
-bindsym $mod+o exec obsidian
-
 
 # ========================
 # Window management
@@ -229,7 +167,7 @@ for_window [class=".*"] border pixel 0
 for_window [class="[.]*"] floating enable 
 for_window [class="eww"] floating disable 
 
-assign [class="qutebrowser"] 3
+assign [class="obsidian"] 2
 assign [class="Brave"] 3
 assign [class="Gimp"] 8
 
