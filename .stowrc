@@ -1,4 +1,5 @@
 --target ~/.config .
 --ignore=.stowrc 
 --ignore=README 
+--ignore=dot-xinitrc 
 --ignore=preview 
