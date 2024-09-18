@@ -310,3 +310,4 @@ ui {
     }
 }
 
+default_session_name "default"
